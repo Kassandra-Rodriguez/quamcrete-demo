@@ -469,8 +469,21 @@ input[type=range]:focus-visible{box-shadow:0 0 0 3px rgba(111,155,209,.5)}
   .area-checks{grid-template-columns:1fr 1fr}
   .quote-card{padding:22px}
   .field-row{grid-template-columns:1fr}
-  .svc-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
+
+  /* card sections become a horizontal swipe row instead of a tall stack */
+  .svc-grid,.steps{
+    display:flex;grid-template-columns:none;
+    overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;scroll-padding-inline:24px;
+    gap:12px;margin-inline:-24px;padding:2px 24px 14px;
+    scrollbar-width:none;
+  }
+  .svc-grid::-webkit-scrollbar,.steps::-webkit-scrollbar{display:none}
+  .svc{flex:0 0 46%;scroll-snap-align:start}
+  .steps>.step{flex:0 0 80%;scroll-snap-align:start}
+  .svc-note{margin-top:14px}
+  .steps-cta{margin-top:22px}
+
   .slide{aspect-ratio:4/3}
   .carousel-btn{width:38px;height:38px}
   .carousel-prev{left:8px}.carousel-next{right:8px}
