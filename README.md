@@ -34,7 +34,7 @@ finish gallery, the one day install and 10 year points spelled out, and a
 | Business hours ("By appointment", "confirm hours") | **Placeholder** | FB only says "Open now". |
 | Years in business, "50+ floors", licensed / insured / bonded | **Not on the page** | Prospect sheet guessed "4 years / 50+ floors"; unverified, so left off. Add if confirmed. |
 | Service-area list incl. Las Cruces / Sunland Park NM | **Partly assumed** | FB says "El Paso & surrounding areas"; prospect sheet says they also serve Las Cruces & Sunland Park. Map + checklist include Sunland Park. Confirm the real radius. |
-| Stylized El Paso service-area map (inline SVG) | Decorative | Not a real map. Used because they have no street address (an embedded Google map needs one). |
+| Service-area section | Simplified | No map. A finished-patio photo (`g5-patio.jpg`) plus a one-line coverage note and a checklist of areas. Follows the Front "Our Locations" pattern from Mobbin. |
 
 ### Photo caveat, important
 
@@ -70,15 +70,23 @@ for the original file (ideally a transparent PNG or SVG) for a crisp version.
 
 ## Palette & type
 
-Dark premium skin. Colors sampled from their logo:
+Dark premium skin with light contrast sections. Colors sampled from their logo:
 
 ```
 --bg        #0b0b0d   near-black ground (logo background)
 --accent    #6f9bd1   steel blue (brightened from the logo diamond #9bb2cd / outline #2b476a)
 --accent-300 #a9c4e4  light steel — eyebrows, accents
---navy      #22304a   deep brand navy
---ok        #57c2a0   teal-green — checkmarks / "free" cue
+--light     #f2f4f7   light-section ground (before/after, gallery, service area)
+--ok        #57c2a0   teal-green — "free / go" cue
 ```
+
+Section rhythm (for contrast): dark hero and trust bar, **light** before/after,
+dark finishes, **light** gallery, dark "how it's done", steel-gradient financing,
+**light** service area, steel-gradient final CTA, near-black footer.
+
+The hero shows the real logo diamond (keyed to transparent from the Facebook logo) with
+"QUAMCRETE COATINGS" and the tagline set in type, so it stays crisp. The footer uses the
+full logo lockup image.
 
 Type: **Sora** (headings) + **Manrope** (body), Google Fonts. Palette and type are the
 first thing to revisit with Mobbin references if the owner wants a different direction.
