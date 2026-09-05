@@ -147,6 +147,7 @@ body.es .lang-toggle .lang-off{background:var(--accent);color:#0a1017}
 
 /* ── quote card ── */
 .quote-card{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:30px;position:relative}
+.quote-open{display:none}   /* mobile-only trigger; form shows inline on desktop */
 .quote-head{margin-bottom:18px}
 .quote-head h2{font-size:1.5rem;font-weight:700;margin-bottom:6px}
 .quote-head p{color:var(--muted);font-size:.92rem}
@@ -462,13 +463,21 @@ input[type=range]:focus-visible{box-shadow:0 0 0 3px rgba(111,155,209,.5)}
   html{scroll-padding-top:70px}
   .section{padding:56px 0}
   .header-inner{height:64px;gap:10px}
-  .btn-call span{display:none}
-  .btn-call{padding:11px;border-radius:50%}
+  .btn-call{display:none}   /* the sticky bottom bar carries the CTA on mobile */
   .brand-mark{height:34px;width:34px}
   .brand-text em{display:none}
   .area-checks{grid-template-columns:1fr 1fr}
   .quote-card{padding:22px}
   .field-row{grid-template-columns:1fr}
+
+  /* mobile: hero quote card collapses to a heading + one button until tapped */
+  .quote-head{margin-bottom:14px}
+  .quote-card .quote-head p{display:none}
+  .quote-card #quoteForm{display:none}
+  .quote-open{display:flex}
+  .quote-card:target .quote-head p{display:block}
+  .quote-card:target #quoteForm:not([hidden]){display:block}
+  .quote-card:target .quote-open{display:none}
 
   /* card sections become a horizontal swipe row instead of a tall stack */
   .svc-grid,.steps{
