@@ -93,9 +93,10 @@ first thing to revisit with Mobbin references if the owner wants a different dir
 
 ## Not yet done
 
-- **Mobile QA on a real device.** This machine's headless/automation tools floor small
-  viewports, so mobile was not verified. Check on a phone before sending: hero, finishes
-  grid, the 5-step "How it's done" row, the SVG map, footer.
+- **Mobile QA on a real device.** This machine's automation tools floor small viewports, so
+  the phone layout is only simulated. The Finishes grid and the "How it's done" steps now
+  collapse to horizontal swipe rows (scroll-snap, peek of the next card) at <=640px instead
+  of stacking tall. Still worth a real-device pass on the hero, quote form and footer.
 - Live check that GitHub Pages serves the fonts and all `assets/` images.
 
 ## Hosting
